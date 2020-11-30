@@ -1,6 +1,6 @@
 public class MainExtended {
     public static void main(String[] args) {
-        String myName = "Magda";
+    String myName = "Magda";
         int myAge = 24;
         char drivingLicense = 'B';
         boolean hasAnimals = true;

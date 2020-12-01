@@ -7,7 +7,7 @@ public class LeapYear {
         boolean result = LeapYear();
         System.out.println(result);
 
-        if (a%b < 1 && a%c > 0 || a%d < 1); {
+        if (a%b == 0 && a%c != 0 || a%d == 0); {
             System.out.println("It's a leap year");
         }
     }

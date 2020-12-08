@@ -1,3 +1,5 @@
+package com.kodilla.examples;
+
 public class IfElse {
     public static void main (String[] args) {
         int yourAge = 12;

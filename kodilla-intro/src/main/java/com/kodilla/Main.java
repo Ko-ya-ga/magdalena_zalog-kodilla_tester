@@ -1,3 +1,5 @@
+package com.kodilla;
+
 public class Main {
     public static void main(String[] args) {
         String myName = "Maciej";
@@ -6,7 +8,7 @@ public class Main {
         char carClass = 'A';
         boolean isGoodProgrammer = true;
         System.out.println(myName);
-        String invitation = "Hello from FirstClass!";
+        String invitation = "Hello from com.kodilla.examples.FirstClass!";
         System.out.println(invitation);
     }
 }

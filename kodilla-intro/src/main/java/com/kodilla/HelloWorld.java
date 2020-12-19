@@ -1,4 +1,4 @@
-package com.kodilla.examples;
+package com.kodilla;
 
 public class HelloWorld {                      //1
     public static void main(String[] args) {   //2

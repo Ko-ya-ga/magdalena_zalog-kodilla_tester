@@ -1,4 +1,4 @@
-package com.kodilla;
+package com.kodilla.examples;
 
 public class SimpleArray {
     public static void main(String[] args) {

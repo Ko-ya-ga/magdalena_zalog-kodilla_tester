@@ -1,16 +1,28 @@
 package com.kodilla;
 
 public class Book {
-    private static String author;
-    private static String title;
+    private String author;
+    private String title;
 
-    public static String of(String author, String title) {
-        return author + title;
+    private Book(String author, String title) {
+        this.author = author;
+        this.title = title;
+    }
+
+    public static Book of(String author, String title) {
+        return new Book(author, title);
     }
 
     public static void main(String[] args) {
-        String book = Book.of("Jack London", "The White Fang");
+        Book book = Book.of("Jack London", "The White Fang");
         System.out.println(book);
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }

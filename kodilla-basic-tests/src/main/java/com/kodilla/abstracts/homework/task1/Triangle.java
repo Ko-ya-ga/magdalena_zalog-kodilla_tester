@@ -1,4 +1,4 @@
-package com.kodilla.abstracts.homework;
+package com.kodilla.abstracts.homework.task1;
 
 public class Triangle extends Shape {
     private final int width;

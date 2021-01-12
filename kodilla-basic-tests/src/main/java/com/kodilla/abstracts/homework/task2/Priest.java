@@ -1,13 +1,13 @@
 package com.kodilla.abstracts.homework.task2;
 
 public class Priest extends Job {
-    public Priest(int salary, String responsibilities) {
+    public Priest() {
         super(3000, "administering the seven sacraments, providing pastoral care, visiting the sick");
     }
 
-    public void priest() {
-        System.out.println("This person's responsibilities are " + priest.getResponsibilities());
+    @Override
+    public void showResponsibilities() {
+        System.out.println("This person's responsibilities are " + getResponsibilities());
     }
 
-    Priest priest = new Priest(3000, "administering the seven sacraments, providing pastoral care, visiting the sick");
 }

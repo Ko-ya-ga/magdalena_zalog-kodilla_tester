@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTestSuite {
+    Calculator calculator = new Calculator();
     @Test
     public void testSum() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int sumResult = calculator.sum(a, b);
@@ -16,7 +16,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testSubtract() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int subtractResult = calculator.subtract(a,b);
@@ -25,7 +24,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testCompoundPositiveNumber() {
-        Calculator calculator = new Calculator();
         int a = 5;
         int b = 8;
         int compoundResult = calculator.compound(a, b);
@@ -34,7 +32,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testCompundZero() {
-        Calculator calculator = new Calculator();
         int a = 0;
         int b = 5;
         int compoundResult = calculator.compound(a, b);
@@ -43,7 +40,6 @@ public class CalculatorTestSuite {
 
     @Test
     public void testCompoundNegativeNumber() {
-        Calculator calculator = new Calculator();
         int a = -5;
         int b = 8;
         int compoundResult = calculator.compound(a, b);

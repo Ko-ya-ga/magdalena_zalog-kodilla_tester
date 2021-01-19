@@ -8,6 +8,7 @@ public class School {
     private List<Integer> studentsInClasses = new ArrayList<>();
 
     public School(String schoolName, int... studentsInClasses) {
+        this.schoolName = schoolName;
         for (int classes : studentsInClasses)
             this.studentsInClasses.add(classes);
     }

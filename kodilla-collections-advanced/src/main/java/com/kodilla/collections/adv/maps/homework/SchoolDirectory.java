@@ -23,7 +23,7 @@ public class SchoolDirectory {
 
         for (Map.Entry<Principal, School> schoolsEntry : schools.entrySet()) {
             System.out.println("Overall number of students in school in " + schoolsEntry.getValue().getSchoolName() +
-                    "lead by " + schoolsEntry.getKey().getFirstName() + " " + schoolsEntry.getKey().getLastName() +
+                    " lead by " + schoolsEntry.getKey().getFirstName() + " " + schoolsEntry.getKey().getLastName() +
                     " is " + schoolsEntry.getValue().getAllStudents());
         }
     }

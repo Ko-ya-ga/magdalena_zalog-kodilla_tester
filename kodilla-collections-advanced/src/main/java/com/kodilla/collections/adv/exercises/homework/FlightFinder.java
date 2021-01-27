@@ -13,6 +13,11 @@ public class FlightFinder {
         return result;
     }
 
-    //public List<Flight> findFlightsTo(String arrival) {
-    // return Collections.emptyList();
+    public List<Flight> findFlightsTo(String arrival) {
+        List<Flight> result = new ArrayList<>();
+        for (Flight flight : flightFinder.getOrDefault(arrival, Collections.emptyList()))
+            if (flight.getArrival().equals(arrival))
+                result.add(flight);
+        return result;
+    }
 }

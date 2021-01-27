@@ -25,6 +25,6 @@ public class Application {
         students.add(s4);
         students.add(s5);
         for (Student student : students)
-            System.out.println(student.getName() + Optional.ofNullable(student.getTeacher()).orElse(new Teacher("<undefined>")));
+            System.out.println(student.getName() + ", " + Optional.ofNullable(student.getTeacher()).orElse(new Teacher("<undefined>")));
     }
 }

@@ -3,7 +3,7 @@ package com.kodilla.exception.homework;
 import java.util.Objects;
 
 public class Order {
-    String number;
+    private String number;
 
     public Order(String number) {
         this.number = number;

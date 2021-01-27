@@ -7,7 +7,11 @@ public class BookManager {
     private static List<Book> books = new ArrayList<>();
 
     public static Book createBook(String title, String author) {
-        books.add(new Book(author, title));
-        return new Book(author, title);
+        Book newBook = new Book(author, title);
+        for (Book book : books)
+            if (book.equals(newBook))
+                return book;
+        books.add(newBook);
+        return newBook;
     }
 }

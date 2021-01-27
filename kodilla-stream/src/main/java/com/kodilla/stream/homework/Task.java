@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Task {
-    String task;
-    LocalDate opened;
-    LocalDate deadline;
+    private String task;
+    private LocalDate opened;
+    private LocalDate deadline;
 
     public Task(String task, LocalDate opened, LocalDate deadline) {
         this.task = task;

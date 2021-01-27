@@ -10,7 +10,7 @@ public class Warehouse {
 
     public static void addOrder(Order order) {
         orders.add(order);
-        System.out.println(orders);
+        System.out.println(order);
     }
 
     public static Order getOrder(String number) throws OrderDoesntExistException {

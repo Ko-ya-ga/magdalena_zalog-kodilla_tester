@@ -10,7 +10,7 @@ public class WarehouseApp {
 
         try {
             Order isOrderPresent = Warehouse.getOrder("9875654");
-            System.out.println("Order status: " + isOrderPresent);
+            System.out.println("This order exists");
         } catch (OrderDoesntExistException e) {
             System.out.println("Sorry, this order doesn't exist");
         }

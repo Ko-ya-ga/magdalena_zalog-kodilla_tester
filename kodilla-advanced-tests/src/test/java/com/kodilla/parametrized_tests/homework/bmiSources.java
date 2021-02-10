@@ -1,6 +1,5 @@
 package com.kodilla.parametrized_tests.homework;
 
-import com.sun.jdi.connect.Connector;
 import org.junit.jupiter.params.provider.Arguments;
 
 import java.util.stream.Stream;

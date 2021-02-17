@@ -1,6 +1,6 @@
 package com.kodilla.spring.basic.dependency_injection.homework;
 
-public class PostOfficeNotificationService implements NotificationService {
+public class PostOfficeNotification implements Notification {
     @Override
     public void success(String address) {
         System.out.println("Package delivered to: " + address + " by post office");

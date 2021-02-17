@@ -6,18 +6,23 @@ import com.kodilla.mockito.NotificationService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class WeatherAlertsAppTestSuite {
     NotificationService notificationService = Mockito.mock(NotificationService.class);
     WeatherAlertsApp weatherAlertsApp = new WeatherAlertsApp(notificationService);
     Client client = Mockito.mock(Client.class);
-    Notification notification = Mockito.mock(Notification.class);
+    Client notification = Mockito.mock(Client.class);
+    Set<Localization> localizations = new HashSet<>();
     Localization localization = Mockito.mock(Localization.class);
     @Test
     public void subscribedClientShouldReceiveNotificationForGivenLocalization() {
-
-
+        /* weatherAlertsApp.subscribe(client, localization);
+        weatherAlertsApp.notify(localizations);
+        Mockito.verify(notificationService, Mockito.times(1)).sendAlert(notification); */
     }
 
     @Test

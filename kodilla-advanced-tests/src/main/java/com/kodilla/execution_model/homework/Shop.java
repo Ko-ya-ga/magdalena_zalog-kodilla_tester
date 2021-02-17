@@ -30,11 +30,10 @@ public class Shop {
     }
 
     public Set<Order> getOrderByValue(double minValue, double maxValue) {
-        return this.orders;
-                /* .stream()
+        return this.orders
+                .stream()
                 .filter(order -> order.getOrderValue() >= minValue && order.getOrderValue() <= maxValue)
-                .mapToDouble(Order::getOrderValue)
-                .collect(Collectors.toSet()); */
+                .collect(Collectors.toSet());
     }
 
 

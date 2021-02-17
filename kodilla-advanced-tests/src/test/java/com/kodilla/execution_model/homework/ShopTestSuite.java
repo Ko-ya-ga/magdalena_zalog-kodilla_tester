@@ -71,7 +71,7 @@ class ShopTestSuite {
         Set<Order> expected = new HashSet<>();
         expected.add(videoGame);
         expected.add(cup);
-        assertEquals(result ,result);
+        assertEquals(expected ,result);
     }
 
     @BeforeEach

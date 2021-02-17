@@ -29,7 +29,11 @@ public class WeatherAlertsApp {
             }
         }
     }
-    public void subscribe(Localization localization) {
-        
+    public void subscribe(Client client, Localization localization) {
+        clientNotifications.get(client).add(localization);
+    }
+
+    public void unsubscribe(Client client, Localization localization) {
+        clientNotifications.get(client).remove(localization);
     }
 }

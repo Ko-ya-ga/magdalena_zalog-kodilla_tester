@@ -28,6 +28,23 @@ public class WalletSteps implements En {
             Assert.assertEquals("Incorrect wallet balance", 170,  wallet.getBalance());
         });
 
+        steps2();
+
+        Given("there is $1000 in my wallet", () -> {
+            wallet.deposit(1000);
+        });
+
+        When("I check the balance of my wallet", () -> {
+            wallet.getBalance();
+            Assert.assertEquals("Incorrect wallet balance", 1000, wallet.getBalance());
+        });
+
+        Then("I should see that the balance is $1000", () -> {
+            Assert.assertEquals("The balance of your wallet is 1000", displayScreen.displayBalance(wallet));
+        });
+    }
+
+    private void steps2() {
         Given("there is $100 in my wallet", () -> {
             wallet.deposit(100);
             Assert.assertEquals("Incorrect wallet balance", 100, wallet.getBalance());
@@ -43,19 +60,6 @@ public class WalletSteps implements En {
 
         Then("the $100 should remain in the wallet", () -> {
             Assert.assertEquals("Incorrect wallet balance", 100, wallet.getBalance());
-        });
-
-        Given("there is $1000 in my wallet", () -> {
-            wallet.deposit(1000);
-        });
-
-        When("I check the balance of my wallet", () -> {
-            wallet.getBalance();
-            Assert.assertEquals("Incorrect wallet balance", 1000, wallet.getBalance());
-        });
-
-        Then("I should see that the balance is $1000", () -> {
-            Assert.assertEquals("The balance of your wallet is 1000", displayScreen.displayBalance(wallet));
         });
     }
 }

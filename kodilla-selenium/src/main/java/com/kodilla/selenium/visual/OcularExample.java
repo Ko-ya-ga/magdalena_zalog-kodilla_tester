@@ -1,6 +1,5 @@
 package com.kodilla.selenium.visual;
 
-import com.testautomationguru.ocular.Ocular;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -11,7 +10,7 @@ public class OcularExample {
         System.setProperty("webdriver.chrome.driver", "C:\\selenium_drivers\\Chrome\\chromedriver.exe");        // [1]
         WebDriver webDriver = new ChromeDriver();
 
-        Ocular.config()
+        /* Ocular.config()
                 .resultPath(Paths.get("C:\\Ocular\\results"))
                 .snapshotPath(Paths.get("C:\\Ocular\\snapshots"))
                 .globalSimilarity(95)
@@ -21,6 +20,6 @@ public class OcularExample {
 
         page.open();
         page.compare();
-        page.close();
+        page.close(); */
     }
 }

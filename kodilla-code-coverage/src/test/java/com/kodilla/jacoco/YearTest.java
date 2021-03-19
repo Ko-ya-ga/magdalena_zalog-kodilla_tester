@@ -31,4 +31,17 @@ public class YearTest {
         //then
         assertFalse(isLeapYear);
     }
+
+    @Test
+    public void shouldBeLeapYearIfDivisibleBy4ButNotBy100() {
+
+        // given
+        Year year = new Year(4);
+
+        //when
+        boolean isLeapYear = year.isLeap();
+
+        //then
+        assertTrue(isLeapYear);
+    }
 }

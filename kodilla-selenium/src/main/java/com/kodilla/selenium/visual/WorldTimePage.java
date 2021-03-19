@@ -1,6 +1,5 @@
 package com.kodilla.selenium.visual;
 
-import com.testautomationguru.ocular.Ocular;
 import org.openqa.selenium.WebDriver;
 
 // @Snap("WorldTime.png")
@@ -22,9 +21,9 @@ public class WorldTimePage {
     }
 
     public void compare() {
-        Ocular.snapshot()
+        /* Ocular.snapshot()
                 .from(this)
                 .sample().using(webDriver)
-                .compare();
+                .compare(); */
     }
 }

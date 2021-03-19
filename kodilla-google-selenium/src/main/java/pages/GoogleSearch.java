@@ -34,7 +34,8 @@ public class GoogleSearch extends AbstractPage {
         inputField.sendKeys("Kodilla");
         googleResults = loadResults(driver);                          // [2]
         googleResults.iSeeResults();
-        googleResults.getRandomResult(driver);
+        randomResult = googleResults.getRandomResult(driver);
+        randomResult.getTitle();
     }
 
     public GoogleResults loadResults(WebDriver driver) {

@@ -11,6 +11,14 @@ public class WalletSteps implements En {
     private DisplayScreen displayScreen = new DisplayScreen();
 
     public WalletSteps() {
+        walletStepsSet1();
+
+        walletStepsSet2();
+
+        walletStepsSet3();
+    }
+
+    private void walletStepsSet1() {
         Given("I have deposited $200 in my wallet", () -> {
             wallet.deposit(200);
             Assert.assertEquals("Incorrect wallet balance", 200, wallet.getBalance());
@@ -27,24 +35,9 @@ public class WalletSteps implements En {
         Then("the balance of my wallet should be $170", () -> {
             Assert.assertEquals("Incorrect wallet balance", 170,  wallet.getBalance());
         });
-
-        steps2();
-
-        Given("there is $1000 in my wallet", () -> {
-            wallet.deposit(1000);
-        });
-
-        When("I check the balance of my wallet", () -> {
-            wallet.getBalance();
-            Assert.assertEquals("Incorrect wallet balance", 1000, wallet.getBalance());
-        });
-
-        Then("I should see that the balance is $1000", () -> {
-            Assert.assertEquals("The balance of your wallet is 1000", displayScreen.displayBalance(wallet));
-        });
     }
 
-    private void steps2() {
+    private void walletStepsSet2() {
         Given("there is $100 in my wallet", () -> {
             wallet.deposit(100);
             Assert.assertEquals("Incorrect wallet balance", 100, wallet.getBalance());
@@ -60,6 +53,21 @@ public class WalletSteps implements En {
 
         Then("the $100 should remain in the wallet", () -> {
             Assert.assertEquals("Incorrect wallet balance", 100, wallet.getBalance());
+        });
+    }
+
+    private void walletStepsSet3() {
+        Given("there is $1000 in my wallet", () -> {
+            wallet.deposit(1000);
+        });
+
+        When("I check the balance of my wallet", () -> {
+            wallet.getBalance();
+            Assert.assertEquals("Incorrect wallet balance", 1000, wallet.getBalance());
+        });
+
+        Then("I should see that the balance is $1000", () -> {
+            Assert.assertEquals("The balance of your wallet is 1000", displayScreen.displayBalance(wallet));
         });
     }
 }

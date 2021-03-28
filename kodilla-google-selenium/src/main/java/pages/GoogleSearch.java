@@ -16,6 +16,9 @@ public class GoogleSearch extends AbstractPage {
     @FindBy(xpath = "//*[@id=\"introAgreeButton\"]/span/span")
     static WebElement agreeButton;
 
+    @FindBy(xpath = "/html/body/div[2]/div[2]/div/mobile-promo/div/div/div/div[2]/g-flat-button")
+    static WebElement closeButton;
+
     @FindBy(css = "input[value='Szukaj w Google']")
     static List<WebElement> searchButton;
     private static GoogleResults googleResults;
@@ -27,6 +30,7 @@ public class GoogleSearch extends AbstractPage {
 
     public void searchResults() {
         PageFactory.initElements(driver, GoogleSearch.class);
+        closeButton.click();
         driver.switchTo().frame(0);
         WebDriverWait waitForAgreeButton = new WebDriverWait(driver, 10);
         waitForAgreeButton.until(ExpectedConditions.elementToBeClickable(agreeButton)).click();
@@ -35,7 +39,7 @@ public class GoogleSearch extends AbstractPage {
         googleResults = loadResults(driver);                          // [2]
         googleResults.iSeeResults();
         randomResult = googleResults.getRandomResult(driver);
-        randomResult.getTitle();
+        randomResult.displayTitle();
     }
 
     public GoogleResults loadResults(WebDriver driver) {

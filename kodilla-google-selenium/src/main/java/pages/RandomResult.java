@@ -13,7 +13,7 @@ public class RandomResult extends AbstractPage {
         super(driver);
     }
 
-    public void getTitle() {
+    public void displayTitle() {
         System.out.println(title);
     }
 }

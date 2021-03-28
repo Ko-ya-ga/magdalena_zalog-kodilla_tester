@@ -59,7 +59,7 @@ public class DbManagerTestSuite {
         statement.close();
     }
 
-    /* @Test
+    @Test
     public void testSelectUsersAndPosts() throws SQLException {
         //Given
         DbManager dbManager2 = DbManager.getInstance();
@@ -95,10 +95,9 @@ public class DbManagerTestSuite {
                     rs2.getInt("POSTS_NUMBER"));
             userCounter++;
         }
-        int expected = postsCount + 1;
-        Assert.assertEquals(expected, userCounter);
+        Assert.assertEquals(3, userCounter);
 
         statement2.close();
         rs2.close();
-    } */
+    }
 }

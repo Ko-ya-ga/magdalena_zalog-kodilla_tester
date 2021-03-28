@@ -22,7 +22,7 @@ public class TaskListRepositoryTestSuite {
 
     @Test
     public void testFindByListName() {
-        /*
+
         // Given
         TaskList taskList = new TaskList("To do", DESCRIPTION);
         taskListRepository.save(taskList);
@@ -35,8 +35,6 @@ public class TaskListRepositoryTestSuite {
         Assert.assertEquals(1, checkTasks.size());
 
         // Clean Up
-        int id = checkTasks.get(0).getId();
-        taskListRepository.deleteById(id);
-    } */
+        taskListRepository.delete(checkTasks.get(0));
     }
 }
